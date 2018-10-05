@@ -14,6 +14,11 @@
 		4D00281921666F6200C8952F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D00281821666F6200C8952F /* Assets.xcassets */; };
 		4D00281C21666F6200C8952F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D00281A21666F6200C8952F /* LaunchScreen.storyboard */; };
 		4D00281F21666F6200C8952F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D00281E21666F6200C8952F /* main.m */; };
+		4D002827216670B100C8952F /* ProPertyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D002826216670B100C8952F /* ProPertyTableViewController.m */; };
+		4D00283021667AEC00C8952F /* PropertyAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D00282F21667AEC00C8952F /* PropertyAddViewController.m */; };
+		4DC464ED2166B71C004FF6F8 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC464EC2166B71C004FF6F8 /* CameraViewController.m */; };
+		4DC464F02166C073004FF6F8 /* PhotoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC464EF2166C073004FF6F8 /* PhotoCollectionViewController.m */; };
+		4DC464F6216700ED004FF6F8 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC464F5216700ED004FF6F8 /* PhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,16 @@
 		4D00281B21666F6200C8952F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D00281D21666F6200C8952F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D00281E21666F6200C8952F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4D002825216670B100C8952F /* ProPertyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProPertyTableViewController.h; sourceTree = "<group>"; };
+		4D002826216670B100C8952F /* ProPertyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProPertyTableViewController.m; sourceTree = "<group>"; };
+		4D00282E21667AEC00C8952F /* PropertyAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyAddViewController.h; sourceTree = "<group>"; };
+		4D00282F21667AEC00C8952F /* PropertyAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyAddViewController.m; sourceTree = "<group>"; };
+		4DC464EB2166B71C004FF6F8 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		4DC464EC2166B71C004FF6F8 /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		4DC464EE2166C073004FF6F8 /* PhotoCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewController.h; sourceTree = "<group>"; };
+		4DC464EF2166C073004FF6F8 /* PhotoCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewController.m; sourceTree = "<group>"; };
+		4DC464F4216700ED004FF6F8 /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		4DC464F5216700ED004FF6F8 /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,15 +76,25 @@
 			isa = PBXGroup;
 			children = (
 				4D00280C21666F6000C8952F /* AppDelegate.h */,
+				4DC464EE2166C073004FF6F8 /* PhotoCollectionViewController.h */,
+				4DC464F4216700ED004FF6F8 /* PhotoViewController.h */,
+				4DC464F5216700ED004FF6F8 /* PhotoViewController.m */,
+				4DC464EF2166C073004FF6F8 /* PhotoCollectionViewController.m */,
 				4D00280D21666F6000C8952F /* AppDelegate.m */,
 				4D00280F21666F6000C8952F /* ViewController.h */,
 				4D00281021666F6000C8952F /* ViewController.m */,
 				4D00281221666F6000C8952F /* Main.storyboard */,
+				4DC464EB2166B71C004FF6F8 /* CameraViewController.h */,
+				4DC464EC2166B71C004FF6F8 /* CameraViewController.m */,
+				4D002825216670B100C8952F /* ProPertyTableViewController.h */,
+				4D002826216670B100C8952F /* ProPertyTableViewController.m */,
 				4D00281821666F6200C8952F /* Assets.xcassets */,
 				4D00281A21666F6200C8952F /* LaunchScreen.storyboard */,
 				4D00281D21666F6200C8952F /* Info.plist */,
 				4D00281E21666F6200C8952F /* main.m */,
 				4D00281521666F6000C8952F /* SmartCamera.xcdatamodeld */,
+				4D00282F21667AEC00C8952F /* PropertyAddViewController.m */,
+				4D00282E21667AEC00C8952F /* PropertyAddViewController.h */,
 			);
 			path = SmartCamera;
 			sourceTree = "<group>";
@@ -146,8 +171,13 @@
 			files = (
 				4D00281721666F6000C8952F /* SmartCamera.xcdatamodeld in Sources */,
 				4D00281121666F6000C8952F /* ViewController.m in Sources */,
+				4D00283021667AEC00C8952F /* PropertyAddViewController.m in Sources */,
 				4D00281F21666F6200C8952F /* main.m in Sources */,
 				4D00280E21666F6000C8952F /* AppDelegate.m in Sources */,
+				4DC464ED2166B71C004FF6F8 /* CameraViewController.m in Sources */,
+				4DC464F6216700ED004FF6F8 /* PhotoViewController.m in Sources */,
+				4D002827216670B100C8952F /* ProPertyTableViewController.m in Sources */,
+				4DC464F02166C073004FF6F8 /* PhotoCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +321,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X276M76E8M;
+				ENABLE_TESTABILITY = NO;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = SmartCamera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -308,6 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X276M76E8M;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = SmartCamera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
