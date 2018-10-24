@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "Property+CoreDataProperties.h"
 #import "CameraViewController.h"
-NS_ASSUME_NONNULL_BEGIN
+#import "PhotoDetailViewController.h"
 
 @interface PhotoViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (strong) NSMutableArray* photos;
 @property (nonatomic,strong) Property* property;
 @property (weak, nonatomic) IBOutlet UICollectionView *uiCollectionView;
+@property (strong,nonatomic)Photo* photo;
 
 @end
 
-NS_ASSUME_NONNULL_END

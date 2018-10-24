@@ -17,8 +17,6 @@
     
 }
 
-
-
 - (IBAction)Save:(UIButton *)sender {
     NSManagedObjectContext *moc = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
     
@@ -28,7 +26,6 @@
     item.location = self.location.text;
     item.price = self.price.text;
     [((AppDelegate *)[UIApplication sharedApplication].delegate) saveContext];
-    
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 - (IBAction)Cancel:(UIButton *)sender {

@@ -1,21 +1,21 @@
 //
-//  ProPertyTableViewController.m
+//  PropertyTableViewController.m
 //  SmartCamera
 //
 //  Created by  shihongliang on 10/4/18.
 //  Copyright © 2018  shihongliang. All rights reserved.
 //
 
-
-#import "ProPertyTableViewController.h"
+///test
+#import "PropertyTableViewController.h"
 #import <CoreData/CoreData.h>
 #import "AppDelegate.h"
 
-@interface ProPertyTableViewController ()
+@interface PropertyTableViewController ()
 
 @end
 
-@implementation ProPertyTableViewController
+@implementation PropertyTableViewController
 @synthesize fetchedResultsController = _fetchedResultsController;
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,16 +24,14 @@
     self.Properties = [[moc executeFetchRequest:fetchRequest error:nil] mutableCopy];
     NSError *error;
     if (![[self fetchedResultsController] performFetch:&error]) {
-        
-        // Update to handle the error appropriately.
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-       
     }
    [self.tableView reloadData];
+   [GIDSignIn sharedInstance].uiDelegate = self;
 }
-//- (void)viewDidDisappear:(BOOL)animated {
-//    self.fetchedResultsController = nil;
-//}
+- (IBAction)signIn:(id)sender {
+    [[GIDSignIn sharedInstance] signIn];
+}
 
 #pragma mark - Table view data source
 
@@ -53,25 +51,14 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     NSManagedObject *device = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", [device valueForKey:@"name"], [device valueForKey:@"location"]]];
-    [cell.detailTextLabel setText:[device valueForKey:@"price"]];
-    
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@ %@", [device valueForKey:@"name"], [device valueForKey:@"location"],[device valueForKey:@"price"]]];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    UICollectionViewFlowLayout* flowLayout = [[UICollectionViewFlowLayout alloc] init];
-//    flowLayout.itemSize = CGSizeMake(100, 100);
-//    [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-//    PhotoCollectionViewController* secondView = [[PhotoCollectionViewController alloc]initWithNibName:@"PhotoCollectionViewController" bundle:nil];
-//
-//
-//    [[self topMostController]presentViewController:secondView animated:YES completion: nil];
-   // [self performSegueWithIdentifier:@"showDetail" sender:nil];
     self.property = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [self performSegueWithIdentifier:@"showDetail" sender:self];
-    
 }
 
 - (UIViewController*) topMostController {
@@ -111,8 +98,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
-    // The fetch controller is about to start sending change notifications, so prepare the table view for updates.
-    
     [self.tableView beginUpdates];
 }
 - (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
@@ -162,56 +147,18 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     }
 }
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-    // The fetch controller has sent all current change notifications, so tell the table view to process all updates.
-    
     [self.tableView endUpdates];
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"showDetail"]) {
         PhotoViewController* viewController = segue.destinationViewController;
         viewController.property = self.property;
-        
     }
 }
 

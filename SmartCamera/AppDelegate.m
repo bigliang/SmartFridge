@@ -8,6 +8,15 @@
 
 #import "AppDelegate.h"
 
+#import <GoogleAPIClientForREST/GTLRUtilities.h>
+#import <GTMSessionFetcher/GTMSessionFetcherService.h>
+#import <GTMSessionFetcher/GTMSessionFetcherLogging.h>
+@import GoogleAPIClientForREST;
+#import "GTLRFramework.h"
+#import "GTLRQuery.h"
+#import "GTLRObject.h"
+#import "GTLRService.h"
+#import "GTLRDrive.h"
 @interface AppDelegate ()
 
 @end
@@ -16,36 +25,52 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    NSString *driveScope = @"https://www.googleapis.com/auth/drive";
+    NSArray *currentScopes = [GIDSignIn sharedInstance].scopes;
+    [GIDSignIn sharedInstance].scopes = [currentScopes arrayByAddingObject:driveScope];
+    [GIDSignIn sharedInstance].clientID = @"129137571194-uo9562psid71t8f8ukoi3ihhoe46kfkr.apps.googleusercontent.com";
+    [GIDSignIn sharedInstance].delegate = self;
     return YES;
 }
-
-
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<NSString *, id> *)options {
+    return [[GIDSignIn sharedInstance] handleURL:url
+                               sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                      annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+}
+- (void)signIn:(GIDSignIn *)signIn
+didSignInForUser:(GIDGoogleUser *)user
+     withError:(NSError *)error {
+ 
+}
+- (void)signIn:(GIDSignIn *)signIn
+didDisconnectWithUser:(GIDGoogleUser *)user
+     withError:(NSError *)error {
+    
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+ 
 }
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+  
 }
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+  
 }
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    // Saves changes in the application's managed object context before the application terminates.
+
     [self saveContext];
 }
 
@@ -59,12 +84,12 @@ managedObjectModel = _managedObjectModel;
 persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (NSURL* )applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.mindstick.CoreDataSample" in the application's documents directory.
+ 
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
 - (NSManagedObjectModel* )managedObjectModel {
-    // The managed object model for the application. It is a fatal error for the application not to be able to find and load its model.
+
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
@@ -77,8 +102,6 @@ persistentStoreCoordinator = _persistentStoreCoordinator;
     if (_persistentStoreCoordinator != nil) {
         return _persistentStoreCoordinator;
     }
-    
-    
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CoreDataSample.sqlite"];
     NSError *error = nil;
@@ -92,17 +115,14 @@ persistentStoreCoordinator = _persistentStoreCoordinator;
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
-    
     return _persistentStoreCoordinator;
 }
 
-
 - (NSManagedObjectContext* )managedObjectContext {
-    // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)
+
     if (_managedObjectContext != nil) {
         return _managedObjectContext;
     }
-    
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (!coordinator) {
         return nil;
@@ -116,7 +136,6 @@ persistentStoreCoordinator = _persistentStoreCoordinator;
     if (managedObjectContext != nil) {
         NSError *error = nil;
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }

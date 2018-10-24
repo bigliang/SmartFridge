@@ -8,41 +8,90 @@
 
 /* Begin PBXBuildFile section */
 		4D00280E21666F6000C8952F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D00280D21666F6000C8952F /* AppDelegate.m */; };
-		4D00281121666F6000C8952F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D00281021666F6000C8952F /* ViewController.m */; };
 		4D00281421666F6000C8952F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D00281221666F6000C8952F /* Main.storyboard */; };
 		4D00281721666F6000C8952F /* SmartCamera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D00281521666F6000C8952F /* SmartCamera.xcdatamodeld */; };
 		4D00281921666F6200C8952F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D00281821666F6200C8952F /* Assets.xcassets */; };
 		4D00281C21666F6200C8952F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D00281A21666F6200C8952F /* LaunchScreen.storyboard */; };
 		4D00281F21666F6200C8952F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D00281E21666F6200C8952F /* main.m */; };
-		4D002827216670B100C8952F /* ProPertyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D002826216670B100C8952F /* ProPertyTableViewController.m */; };
+		4D002827216670B100C8952F /* PropertyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D002826216670B100C8952F /* PropertyTableViewController.m */; };
 		4D00283021667AEC00C8952F /* PropertyAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D00282F21667AEC00C8952F /* PropertyAddViewController.m */; };
+		4D16C0CD217AB971005000A2 /* ShoppingListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D16C0CC217AB971005000A2 /* ShoppingListTableViewController.m */; };
+		4DB91725218015320081C1A9 /* Menu+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9170F218015320081C1A9 /* Menu+CoreDataClass.m */; };
+		4DB91726218015320081C1A9 /* Menu+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB91710218015320081C1A9 /* Menu+CoreDataProperties.m */; };
+		4DB91727218015320081C1A9 /* Fridge+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB91713218015320081C1A9 /* Fridge+CoreDataClass.m */; };
+		4DB91728218015320081C1A9 /* Fridge+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB91714218015320081C1A9 /* Fridge+CoreDataProperties.m */; };
+		4DB91729218015320081C1A9 /* ShoppingList+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB91717218015320081C1A9 /* ShoppingList+CoreDataClass.m */; };
+		4DB9172A218015320081C1A9 /* ShoppingList+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB91718218015320081C1A9 /* ShoppingList+CoreDataProperties.m */; };
+		4DB9172B218015320081C1A9 /* Photo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9171B218015320081C1A9 /* Photo+CoreDataClass.m */; };
+		4DB9172C218015320081C1A9 /* Photo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9171C218015320081C1A9 /* Photo+CoreDataProperties.m */; };
+		4DB9172D218015320081C1A9 /* Property+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9171F218015320081C1A9 /* Property+CoreDataClass.m */; };
+		4DB9172E218015320081C1A9 /* Property+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB91720218015320081C1A9 /* Property+CoreDataProperties.m */; };
+		4DB9172F218015320081C1A9 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB91723218015320081C1A9 /* User+CoreDataClass.m */; };
+		4DB91730218015320081C1A9 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB91724218015320081C1A9 /* User+CoreDataProperties.m */; };
 		4DC464ED2166B71C004FF6F8 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC464EC2166B71C004FF6F8 /* CameraViewController.m */; };
-		4DC464F02166C073004FF6F8 /* PhotoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC464EF2166C073004FF6F8 /* PhotoCollectionViewController.m */; };
 		4DC464F6216700ED004FF6F8 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC464F5216700ED004FF6F8 /* PhotoViewController.m */; };
+		4DC465AD2167F54D004FF6F8 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC465AC2167F54D004FF6F8 /* PhotoDetailViewController.m */; };
+		9ED15802EFEA3CC06B1F32F4 /* Pods_SmartCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E0236583DEAEACE0CE0CAC /* Pods_SmartCamera.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D00280921666F6000C8952F /* SmartCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D00280C21666F6000C8952F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4D00280D21666F6000C8952F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4D00280F21666F6000C8952F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4D00281021666F6000C8952F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4D00281321666F6000C8952F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D00281621666F6000C8952F /* SmartCamera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartCamera.xcdatamodel; sourceTree = "<group>"; };
 		4D00281821666F6200C8952F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D00281B21666F6200C8952F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D00281D21666F6200C8952F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D00281E21666F6200C8952F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4D002825216670B100C8952F /* ProPertyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProPertyTableViewController.h; sourceTree = "<group>"; };
-		4D002826216670B100C8952F /* ProPertyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProPertyTableViewController.m; sourceTree = "<group>"; };
+		4D002825216670B100C8952F /* PropertyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyTableViewController.h; sourceTree = "<group>"; };
+		4D002826216670B100C8952F /* PropertyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyTableViewController.m; sourceTree = "<group>"; };
 		4D00282E21667AEC00C8952F /* PropertyAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyAddViewController.h; sourceTree = "<group>"; };
 		4D00282F21667AEC00C8952F /* PropertyAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyAddViewController.m; sourceTree = "<group>"; };
+		4D16C0CB217AB971005000A2 /* ShoppingListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingListTableViewController.h; sourceTree = "<group>"; };
+		4D16C0CC217AB971005000A2 /* ShoppingListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingListTableViewController.m; sourceTree = "<group>"; };
+		4DB9170D218015320081C1A9 /* Menu+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Menu+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4DB9170E218015320081C1A9 /* Menu+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Menu+CoreDataClass.h"; sourceTree = "<group>"; };
+		4DB9170F218015320081C1A9 /* Menu+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Menu+CoreDataClass.m"; sourceTree = "<group>"; };
+		4DB91710218015320081C1A9 /* Menu+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Menu+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4DB91711218015320081C1A9 /* Fridge+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fridge+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4DB91712218015320081C1A9 /* Fridge+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fridge+CoreDataClass.h"; sourceTree = "<group>"; };
+		4DB91713218015320081C1A9 /* Fridge+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Fridge+CoreDataClass.m"; sourceTree = "<group>"; };
+		4DB91714218015320081C1A9 /* Fridge+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Fridge+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4DB91715218015320081C1A9 /* ShoppingList+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShoppingList+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4DB91716218015320081C1A9 /* ShoppingList+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShoppingList+CoreDataClass.h"; sourceTree = "<group>"; };
+		4DB91717218015320081C1A9 /* ShoppingList+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ShoppingList+CoreDataClass.m"; sourceTree = "<group>"; };
+		4DB91718218015320081C1A9 /* ShoppingList+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ShoppingList+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4DB91719218015320081C1A9 /* Photo+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4DB9171A218015320081C1A9 /* Photo+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photo+CoreDataClass.h"; sourceTree = "<group>"; };
+		4DB9171B218015320081C1A9 /* Photo+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Photo+CoreDataClass.m"; sourceTree = "<group>"; };
+		4DB9171C218015320081C1A9 /* Photo+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Photo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4DB9171D218015320081C1A9 /* Property+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Property+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4DB9171E218015320081C1A9 /* Property+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Property+CoreDataClass.h"; sourceTree = "<group>"; };
+		4DB9171F218015320081C1A9 /* Property+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Property+CoreDataClass.m"; sourceTree = "<group>"; };
+		4DB91720218015320081C1A9 /* Property+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Property+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4DB91721218015320081C1A9 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4DB91722218015320081C1A9 /* User+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataClass.h"; sourceTree = "<group>"; };
+		4DB91723218015320081C1A9 /* User+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataClass.m"; sourceTree = "<group>"; };
+		4DB91724218015320081C1A9 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
 		4DC464EB2166B71C004FF6F8 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		4DC464EC2166B71C004FF6F8 /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
-		4DC464EE2166C073004FF6F8 /* PhotoCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewController.h; sourceTree = "<group>"; };
-		4DC464EF2166C073004FF6F8 /* PhotoCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewController.m; sourceTree = "<group>"; };
 		4DC464F4216700ED004FF6F8 /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		4DC464F5216700ED004FF6F8 /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		4DC46567216738FE004FF6F8 /* libGoogleToolboxForMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleToolboxForMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC4656A21673A13004FF6F8 /* libGTMOAuth2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGTMOAuth2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC4657021673A18004FF6F8 /* libGTMSessionFetcher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGTMSessionFetcher.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC4657F2167A28D004FF6F8 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC465852167A292004FF6F8 /* GTMOAuth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMOAuth2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC465872167A29A004FF6F8 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC4658F2167A3F0004FF6F8 /* libGoogleToolboxForMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleToolboxForMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC465912167A3F4004FF6F8 /* libGTMOAuth2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGTMOAuth2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC465932167A3F8004FF6F8 /* libGTMSessionFetcher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGTMSessionFetcher.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC465AB2167F54D004FF6F8 /* PhotoDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
+		4DC465AC2167F54D004FF6F8 /* PhotoDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
+		61CE741DE843815682859836 /* Pods-SmartCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCamera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartCamera/Pods-SmartCamera.debug.xcconfig"; sourceTree = "<group>"; };
+		79E0236583DEAEACE0CE0CAC /* Pods_SmartCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E9DA6F4776C110C7D14107F /* Pods-SmartCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCamera.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartCamera/Pods-SmartCamera.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ED15802EFEA3CC06B1F32F4 /* Pods_SmartCamera.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +111,8 @@
 			children = (
 				4D00280B21666F6000C8952F /* SmartCamera */,
 				4D00280A21666F6000C8952F /* Products */,
+				95BA708E548EA549C0DDCB86 /* Pods */,
+				FB859841849439BDCACE6428 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,19 +127,41 @@
 		4D00280B21666F6000C8952F /* SmartCamera */ = {
 			isa = PBXGroup;
 			children = (
+				4DB9170D218015320081C1A9 /* Menu+CoreDataProperties.h */,
+				4DB9170E218015320081C1A9 /* Menu+CoreDataClass.h */,
+				4DB9170F218015320081C1A9 /* Menu+CoreDataClass.m */,
+				4DB91710218015320081C1A9 /* Menu+CoreDataProperties.m */,
+				4DB91711218015320081C1A9 /* Fridge+CoreDataProperties.h */,
+				4DB91712218015320081C1A9 /* Fridge+CoreDataClass.h */,
+				4DB91713218015320081C1A9 /* Fridge+CoreDataClass.m */,
+				4DB91714218015320081C1A9 /* Fridge+CoreDataProperties.m */,
+				4DB91715218015320081C1A9 /* ShoppingList+CoreDataProperties.h */,
+				4DB91716218015320081C1A9 /* ShoppingList+CoreDataClass.h */,
+				4DB91717218015320081C1A9 /* ShoppingList+CoreDataClass.m */,
+				4DB91718218015320081C1A9 /* ShoppingList+CoreDataProperties.m */,
+				4DB91719218015320081C1A9 /* Photo+CoreDataProperties.h */,
+				4DB9171A218015320081C1A9 /* Photo+CoreDataClass.h */,
+				4DB9171B218015320081C1A9 /* Photo+CoreDataClass.m */,
+				4DB9171C218015320081C1A9 /* Photo+CoreDataProperties.m */,
+				4DB9171D218015320081C1A9 /* Property+CoreDataProperties.h */,
+				4DB9171E218015320081C1A9 /* Property+CoreDataClass.h */,
+				4DB9171F218015320081C1A9 /* Property+CoreDataClass.m */,
+				4DB91720218015320081C1A9 /* Property+CoreDataProperties.m */,
+				4DB91721218015320081C1A9 /* User+CoreDataProperties.h */,
+				4DB91722218015320081C1A9 /* User+CoreDataClass.h */,
+				4DB91723218015320081C1A9 /* User+CoreDataClass.m */,
+				4DB91724218015320081C1A9 /* User+CoreDataProperties.m */,
 				4D00280C21666F6000C8952F /* AppDelegate.h */,
-				4DC464EE2166C073004FF6F8 /* PhotoCollectionViewController.h */,
 				4DC464F4216700ED004FF6F8 /* PhotoViewController.h */,
 				4DC464F5216700ED004FF6F8 /* PhotoViewController.m */,
-				4DC464EF2166C073004FF6F8 /* PhotoCollectionViewController.m */,
 				4D00280D21666F6000C8952F /* AppDelegate.m */,
-				4D00280F21666F6000C8952F /* ViewController.h */,
-				4D00281021666F6000C8952F /* ViewController.m */,
 				4D00281221666F6000C8952F /* Main.storyboard */,
+				4DC465AB2167F54D004FF6F8 /* PhotoDetailViewController.h */,
+				4DC465AC2167F54D004FF6F8 /* PhotoDetailViewController.m */,
 				4DC464EB2166B71C004FF6F8 /* CameraViewController.h */,
 				4DC464EC2166B71C004FF6F8 /* CameraViewController.m */,
-				4D002825216670B100C8952F /* ProPertyTableViewController.h */,
-				4D002826216670B100C8952F /* ProPertyTableViewController.m */,
+				4D002825216670B100C8952F /* PropertyTableViewController.h */,
+				4D002826216670B100C8952F /* PropertyTableViewController.m */,
 				4D00281821666F6200C8952F /* Assets.xcassets */,
 				4D00281A21666F6200C8952F /* LaunchScreen.storyboard */,
 				4D00281D21666F6200C8952F /* Info.plist */,
@@ -95,8 +169,36 @@
 				4D00281521666F6000C8952F /* SmartCamera.xcdatamodeld */,
 				4D00282F21667AEC00C8952F /* PropertyAddViewController.m */,
 				4D00282E21667AEC00C8952F /* PropertyAddViewController.h */,
+				4D16C0CB217AB971005000A2 /* ShoppingListTableViewController.h */,
+				4D16C0CC217AB971005000A2 /* ShoppingListTableViewController.m */,
 			);
 			path = SmartCamera;
+			sourceTree = "<group>";
+		};
+		95BA708E548EA549C0DDCB86 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61CE741DE843815682859836 /* Pods-SmartCamera.debug.xcconfig */,
+				8E9DA6F4776C110C7D14107F /* Pods-SmartCamera.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB859841849439BDCACE6428 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DC465932167A3F8004FF6F8 /* libGTMSessionFetcher.a */,
+				4DC465912167A3F4004FF6F8 /* libGTMOAuth2.a */,
+				4DC4658F2167A3F0004FF6F8 /* libGoogleToolboxForMac.a */,
+				4DC465872167A29A004FF6F8 /* GTMSessionFetcher.framework */,
+				4DC465852167A292004FF6F8 /* GTMOAuth2.framework */,
+				4DC4657F2167A28D004FF6F8 /* GoogleToolboxForMac.framework */,
+				4DC4657021673A18004FF6F8 /* libGTMSessionFetcher.a */,
+				4DC4656A21673A13004FF6F8 /* libGTMOAuth2.a */,
+				4DC46567216738FE004FF6F8 /* libGoogleToolboxForMac.a */,
+				79E0236583DEAEACE0CE0CAC /* Pods_SmartCamera.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +208,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D00282221666F6200C8952F /* Build configuration list for PBXNativeTarget "SmartCamera" */;
 			buildPhases = (
+				335D24163B6649FDD3AA4A65 /* [CP] Check Pods Manifest.lock */,
 				4D00280521666F6000C8952F /* Sources */,
 				4D00280621666F6000C8952F /* Frameworks */,
 				4D00280721666F6000C8952F /* Resources */,
+				C5B3F51E70EB12F0A72F73CA /* [CP] Copy Pods Resources */,
+				FCF5DE291A578570E2BAE467 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,20 +269,95 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		335D24163B6649FDD3AA4A65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartCamera-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5B3F51E70EB12F0A72F73CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmartCamera/Pods-SmartCamera-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartCamera/Pods-SmartCamera-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCF5DE291A578570E2BAE467 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmartCamera/Pods-SmartCamera-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartCamera/Pods-SmartCamera-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4D00280521666F6000C8952F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB91730218015320081C1A9 /* User+CoreDataProperties.m in Sources */,
 				4D00281721666F6000C8952F /* SmartCamera.xcdatamodeld in Sources */,
-				4D00281121666F6000C8952F /* ViewController.m in Sources */,
 				4D00283021667AEC00C8952F /* PropertyAddViewController.m in Sources */,
+				4DB9172D218015320081C1A9 /* Property+CoreDataClass.m in Sources */,
+				4DB91727218015320081C1A9 /* Fridge+CoreDataClass.m in Sources */,
+				4DB9172E218015320081C1A9 /* Property+CoreDataProperties.m in Sources */,
+				4DB91729218015320081C1A9 /* ShoppingList+CoreDataClass.m in Sources */,
+				4DB91725218015320081C1A9 /* Menu+CoreDataClass.m in Sources */,
+				4DC465AD2167F54D004FF6F8 /* PhotoDetailViewController.m in Sources */,
 				4D00281F21666F6200C8952F /* main.m in Sources */,
+				4D16C0CD217AB971005000A2 /* ShoppingListTableViewController.m in Sources */,
 				4D00280E21666F6000C8952F /* AppDelegate.m in Sources */,
 				4DC464ED2166B71C004FF6F8 /* CameraViewController.m in Sources */,
 				4DC464F6216700ED004FF6F8 /* PhotoViewController.m in Sources */,
-				4D002827216670B100C8952F /* ProPertyTableViewController.m in Sources */,
-				4DC464F02166C073004FF6F8 /* PhotoCollectionViewController.m in Sources */,
+				4DB9172C218015320081C1A9 /* Photo+CoreDataProperties.m in Sources */,
+				4DB9172F218015320081C1A9 /* User+CoreDataClass.m in Sources */,
+				4DB9172A218015320081C1A9 /* ShoppingList+CoreDataProperties.m in Sources */,
+				4D002827216670B100C8952F /* PropertyTableViewController.m in Sources */,
+				4DB91728218015320081C1A9 /* Fridge+CoreDataProperties.m in Sources */,
+				4DB9172B218015320081C1A9 /* Photo+CoreDataClass.m in Sources */,
+				4DB91726218015320081C1A9 /* Menu+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,17 +497,24 @@
 		};
 		4D00282321666F6200C8952F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61CE741DE843815682859836 /* Pods-SmartCamera.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X276M76E8M;
+				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = SmartCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = s.SmartCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -336,16 +523,22 @@
 		};
 		4D00282421666F6200C8952F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E9DA6F4776C110C7D14107F /* Pods-SmartCamera.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X276M76E8M;
+				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = SmartCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = s.SmartCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,5 +1,5 @@
 //
-//  ProPertyTableViewController.h
+//  PropertyTableViewController.h
 //  SmartCamera
 //
 //  Created by  shihongliang on 10/4/18.
@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "PhotoViewController.h"
-NS_ASSUME_NONNULL_BEGIN
+@import GoogleSignIn;
 
-@interface ProPertyTableViewController : UITableViewController<NSFetchedResultsControllerDelegate>
+
+
+@interface PropertyTableViewController : UITableViewController<NSFetchedResultsControllerDelegate>
 @property (strong) NSMutableArray *Properties;
 @property (nonatomic, retain) NSFetchedResultsController* fetchedResultsController;
 @property (strong,nonatomic)Property* property;
+
+@property(weak, nonatomic) IBOutlet GIDSignInButton* signInButton;
 @end
 
-NS_ASSUME_NONNULL_END
+

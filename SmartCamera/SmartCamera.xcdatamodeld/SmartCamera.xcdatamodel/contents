@@ -1,20 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="Photo" representedClassName="Photo" syncable="YES" codeGenerationType="class">
+    <entity name="Fridge" representedClassName="Fridge" syncable="YES">
+        <attribute name="brand" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Menu" representedClassName="Menu" syncable="YES"/>
+    <entity name="Photo" representedClassName="Photo" syncable="YES">
         <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="property" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Property" inverseName="photos" inverseEntity="Property" syncable="YES"/>
     </entity>
-    <entity name="Property" representedClassName="Property" syncable="YES" codeGenerationType="class">
+    <entity name="Property" representedClassName="Property" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="exprieDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="property" inverseEntity="Photo" syncable="YES"/>
     </entity>
+    <entity name="ShoppingList" representedClassName="ShoppingList" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="property" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Property" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fridge" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fridge" syncable="YES"/>
+        <relationship name="menu" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Menu" syncable="YES"/>
+        <relationship name="shoppingList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShoppingList" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Photo" positionX="223.3671875" positionY="78.02734375" width="128" height="120"/>
-        <element name="Property" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Fridge" positionX="-143.5859375" positionY="-75.33203125" width="128" height="60"/>
+        <element name="Menu" positionX="-214.53125" positionY="37.95703125" width="128" height="43"/>
+        <element name="Photo" positionX="230.3984375" positionY="187.68359375" width="128" height="135"/>
+        <element name="Property" positionX="396.203125" positionY="-124.28125" width="128" height="135"/>
+        <element name="ShoppingList" positionX="-111.59765625" positionY="161.375" width="128" height="103"/>
+        <element name="User" positionX="22.3984375" positionY="-47.19921875" width="128" height="133"/>
     </elements>
 </model>
