@@ -11,7 +11,7 @@
 #import "CameraViewController.h"
 #import "PhotoDetailViewController.h"
 
-@interface PhotoViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface PhotoViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate,UIGestureRecognizerDelegate>
 
 @property (strong) NSMutableArray* photos;
 @property (nonatomic,strong) Property* property;

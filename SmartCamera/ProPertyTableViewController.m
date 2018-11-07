@@ -28,6 +28,37 @@
     }
    [self.tableView reloadData];
    [GIDSignIn sharedInstance].uiDelegate = self;
+    UILongPressGestureRecognizer *lpgr
+    = [[UILongPressGestureRecognizer alloc]
+       initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.delegate = self;
+    lpgr.delaysTouchesBegan = YES;
+    [self.tableView addGestureRecognizer:lpgr];
+}
+-(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
+        return;
+    }
+    CGPoint p = [gestureRecognizer locationInView:self.tableView];
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:p];
+    if (indexPath == nil){
+        NSLog(@"couldn't find index path");
+    } else {
+        // get the cell at indexPath (the one you long pressed)
+        UICollectionViewCell* cell =
+        [self.tableView cellForRowAtIndexPath:indexPath];
+        Property* p = [self.Properties objectAtIndex:indexPath.row];
+        
+        NSManagedObjectContext *moc = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Property"];
+        fetchRequest.predicate = [NSPredicate predicateWithFormat:@"name = %@" , p.name];
+        Property *item = [[moc executeFetchRequest:fetchRequest error:nil]objectAtIndex:0];
+        [moc deleteObject:item];
+        [((AppDelegate *)[UIApplication sharedApplication].delegate) saveContext];
+//[self.uiCollectionView reloadData];
+    }
 }
 - (IBAction)signIn:(id)sender {
     [[GIDSignIn sharedInstance] signIn];

@@ -15,7 +15,11 @@
 		4D00281F21666F6200C8952F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D00281E21666F6200C8952F /* main.m */; };
 		4D002827216670B100C8952F /* PropertyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D002826216670B100C8952F /* PropertyTableViewController.m */; };
 		4D00283021667AEC00C8952F /* PropertyAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D00282F21667AEC00C8952F /* PropertyAddViewController.m */; };
+		4D0B0148219156D3001EA76E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0B0147219156D3001EA76E /* CoreLocation.framework */; };
+		4D0B014A219156E0001EA76E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0B0149219156E0001EA76E /* MapKit.framework */; };
+		4D15644B21914E76000281A9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D15644A21914E76000281A9 /* MapViewController.m */; };
 		4D16C0CD217AB971005000A2 /* ShoppingListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D16C0CC217AB971005000A2 /* ShoppingListTableViewController.m */; };
+		4D35BD8021933DF7001404DA /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D35BD7F21933DF7001404DA /* MenuTableViewController.m */; };
 		4DB91725218015320081C1A9 /* Menu+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9170F218015320081C1A9 /* Menu+CoreDataClass.m */; };
 		4DB91726218015320081C1A9 /* Menu+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB91710218015320081C1A9 /* Menu+CoreDataProperties.m */; };
 		4DB91727218015320081C1A9 /* Fridge+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB91713218015320081C1A9 /* Fridge+CoreDataClass.m */; };
@@ -48,8 +52,14 @@
 		4D002826216670B100C8952F /* PropertyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyTableViewController.m; sourceTree = "<group>"; };
 		4D00282E21667AEC00C8952F /* PropertyAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyAddViewController.h; sourceTree = "<group>"; };
 		4D00282F21667AEC00C8952F /* PropertyAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyAddViewController.m; sourceTree = "<group>"; };
+		4D0B0147219156D3001EA76E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4D0B0149219156E0001EA76E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4D15644921914E76000281A9 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		4D15644A21914E76000281A9 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		4D16C0CB217AB971005000A2 /* ShoppingListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingListTableViewController.h; sourceTree = "<group>"; };
 		4D16C0CC217AB971005000A2 /* ShoppingListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingListTableViewController.m; sourceTree = "<group>"; };
+		4D35BD7E21933DF7001404DA /* MenuTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		4D35BD7F21933DF7001404DA /* MenuTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		4DB9170D218015320081C1A9 /* Menu+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Menu+CoreDataProperties.h"; sourceTree = "<group>"; };
 		4DB9170E218015320081C1A9 /* Menu+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Menu+CoreDataClass.h"; sourceTree = "<group>"; };
 		4DB9170F218015320081C1A9 /* Menu+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Menu+CoreDataClass.m"; sourceTree = "<group>"; };
@@ -99,6 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0B014A219156E0001EA76E /* MapKit.framework in Frameworks */,
+				4D0B0148219156D3001EA76E /* CoreLocation.framework in Frameworks */,
 				9ED15802EFEA3CC06B1F32F4 /* Pods_SmartCamera.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,11 +168,15 @@
 				4DC464F5216700ED004FF6F8 /* PhotoViewController.m */,
 				4D00280D21666F6000C8952F /* AppDelegate.m */,
 				4D00281221666F6000C8952F /* Main.storyboard */,
+				4D15644921914E76000281A9 /* MapViewController.h */,
+				4D15644A21914E76000281A9 /* MapViewController.m */,
 				4DC465AB2167F54D004FF6F8 /* PhotoDetailViewController.h */,
 				4DC465AC2167F54D004FF6F8 /* PhotoDetailViewController.m */,
 				4DC464EB2166B71C004FF6F8 /* CameraViewController.h */,
 				4DC464EC2166B71C004FF6F8 /* CameraViewController.m */,
 				4D002825216670B100C8952F /* PropertyTableViewController.h */,
+				4D35BD7E21933DF7001404DA /* MenuTableViewController.h */,
+				4D35BD7F21933DF7001404DA /* MenuTableViewController.m */,
 				4D002826216670B100C8952F /* PropertyTableViewController.m */,
 				4D00281821666F6200C8952F /* Assets.xcassets */,
 				4D00281A21666F6200C8952F /* LaunchScreen.storyboard */,
@@ -187,6 +203,8 @@
 		FB859841849439BDCACE6428 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D0B0149219156E0001EA76E /* MapKit.framework */,
+				4D0B0147219156D3001EA76E /* CoreLocation.framework */,
 				4DC465932167A3F8004FF6F8 /* libGTMSessionFetcher.a */,
 				4DC465912167A3F4004FF6F8 /* libGTMOAuth2.a */,
 				4DC4658F2167A3F0004FF6F8 /* libGoogleToolboxForMac.a */,
@@ -358,6 +376,8 @@
 				4DB91728218015320081C1A9 /* Fridge+CoreDataProperties.m in Sources */,
 				4DB9172B218015320081C1A9 /* Photo+CoreDataClass.m in Sources */,
 				4DB91726218015320081C1A9 /* Menu+CoreDataProperties.m in Sources */,
+				4D15644B21914E76000281A9 /* MapViewController.m in Sources */,
+				4D35BD8021933DF7001404DA /* MenuTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

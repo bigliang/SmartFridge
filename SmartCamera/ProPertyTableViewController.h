@@ -13,7 +13,7 @@
 
 
 
-@interface PropertyTableViewController : UITableViewController<NSFetchedResultsControllerDelegate>
+@interface PropertyTableViewController : UITableViewController<NSFetchedResultsControllerDelegate,UIGestureRecognizerDelegate>
 @property (strong) NSMutableArray *Properties;
 @property (nonatomic, retain) NSFetchedResultsController* fetchedResultsController;
 @property (strong,nonatomic)Property* property;

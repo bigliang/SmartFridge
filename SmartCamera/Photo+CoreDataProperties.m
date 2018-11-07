@@ -21,5 +21,5 @@
 @dynamic image;
 @dynamic label;
 @dynamic property;
-
+@dynamic expireDate;
 @end

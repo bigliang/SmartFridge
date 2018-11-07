@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSData *image;
 @property (nullable, nonatomic, copy) NSString *label;
 @property (nullable, nonatomic, retain) Property *property;
+@property (nullable, nonatomic, copy) NSDate *expireDate;
 
 @end
 

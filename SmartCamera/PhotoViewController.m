@@ -24,6 +24,38 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Photo"];
     fetchRequest.predicate = [NSPredicate predicateWithFormat:@"property = %@" , self.property];
     self.photos = [[moc executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    UILongPressGestureRecognizer *lpgr
+    = [[UILongPressGestureRecognizer alloc]
+       initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.delegate = self;
+    lpgr.delaysTouchesBegan = YES;
+    [self.uiCollectionView addGestureRecognizer:lpgr];
+}
+
+-(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
+        return;
+    }
+    CGPoint p = [gestureRecognizer locationInView:self.uiCollectionView];
+    
+    NSIndexPath *indexPath = [self.uiCollectionView indexPathForItemAtPoint:p];
+    if (indexPath == nil){
+        NSLog(@"couldn't find index path");
+    } else {
+        // get the cell at indexPath (the one you long pressed)
+        UICollectionViewCell* cell =
+        [self.uiCollectionView cellForItemAtIndexPath:indexPath];
+        Photo* p = [self.photos objectAtIndex:indexPath.row];
+        
+        NSManagedObjectContext *moc = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Photo"];
+        fetchRequest.predicate = [NSPredicate predicateWithFormat:@"id = %@" , p.id];
+        Photo *item = [[moc executeFetchRequest:fetchRequest error:nil]objectAtIndex:0];
+        [moc deleteObject:item];
+         [((AppDelegate *)[UIApplication sharedApplication].delegate) saveContext];
+        [self.uiCollectionView reloadData];
+    }
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
