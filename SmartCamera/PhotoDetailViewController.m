@@ -70,7 +70,10 @@
     if (@available(iOS 10.0, *)) {
         UNMutableNotificationContent* content = [[UNMutableNotificationContent alloc] init];
         content.title = [NSString localizedUserNotificationStringForKey:@"Careful!" arguments:nil];
-        content.body = [NSString localizedUserNotificationStringForKey:@"your apples will be expired!"
+        //NSString *string1 = @"This is";
+        NSString *string2 = @" will expire please handle it !";
+        NSString *string3 = [self.item.label stringByAppendingString:string2];
+        content.body = [NSString localizedUserNotificationStringForKey:string3
             arguments:nil];
         NSDateComponents* date = [[NSDateComponents alloc] init];
         date.hour = 7;

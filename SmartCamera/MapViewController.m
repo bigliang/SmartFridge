@@ -56,7 +56,7 @@
                 MKPointAnnotation *annotation =
                 [[MKPointAnnotation alloc]init];
                 annotation.coordinate = item.placemark.coordinate;
-                annotation.title = @"sdd";
+                annotation.title = _searchText.text;
                 [self.mapView addAnnotation:annotation];
             }
     }];
